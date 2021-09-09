@@ -1,0 +1,56 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-image: url(./images/inha-unversity.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 70px; 
+  font-weight: 600;
+  margin: 0;
+  padding-top: 50px;
+  color: rgb(8, 255, 28);
+  left: 30%;
+  top: 100px;
+}
+
+.name {
+  position: absolute;
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 70px; 
+  font-weight: 600;
+  color: rgb(0, 204, 255);
+  left: 30%;
+  top: 20px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
+}

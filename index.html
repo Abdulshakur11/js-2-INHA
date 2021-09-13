@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INHA University</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <div class="wrapper">
-    <p class="text"></p>
-    <div class="name-wrapper">
-      <p class="name">
-    </div>
-    </p>
-  </div>
+
+
+  <main>
+    <section class="form-section">
+      <div class="container">
+          <form class=" form-js" action="https://echo.htmlacademy.ru" method="POST">
+
+            <div class="row justify-content-center pt-5">
+                <div class="col-md-5">
+                  <label for="name-id">Ismingizni kiriting</label>
+                  <input type="text" class="form-control name-input" id="name-id" placeholder="Ismingizni kiriting" aria-label="First name" required>
+                </div>
+                <div class="col-md-5">
+                  <label for="surename-id">Familiyangizni kiriting</label>
+                  <input type="text" class="form-control surename-input" id="surename-id" placeholder="Familiyangizni kiriting" aria-label="Last name" required>
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="score-id">Olgan balingizni kiriting</label>
+                  <input type="number" class="form-control enter-score" id="score-id" placeholder="Olgan balingizni kiriting" aria-label="Enter your score" required>
+                </div>
+            </div>
+           <button class="btn btn-info button-btn" type="submit">Aniqlash</button>
+          </form>
+        </div>
+        <p class="name-js"></p>
+        <p class="result"></p>
+        <div class="loader">
+          <img src="./images/loading.svg" alt="loader-icon" width="100" height="100"> 
+        </div>
+        <div class="wrapper"></div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/bootstrap.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
+
 </html>

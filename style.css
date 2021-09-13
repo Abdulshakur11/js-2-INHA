@@ -11,33 +11,6 @@ body {
   background-position: center center;
 }
 
-.text {
-  position: absolute;
-  width: 100%;
-  max-width: 650px;
-  text-align: center;
-  font-size: 50px;
-  line-height: 70px; 
-  font-weight: 600;
-  margin: 0;
-  padding-top: 50px;
-  color: rgb(8, 255, 28);
-  left: 30%;
-  top: 100px;
-}
-
-.name {
-  position: absolute;
-  width: 100%;
-  max-width: 650px;
-  text-align: center;
-  font-size: 50px;
-  line-height: 70px; 
-  font-weight: 600;
-  color: rgb(0, 204, 255);
-  left: 30%;
-  top: 20px;
-}
 
 .wrapper {
   position: absolute;
@@ -47,10 +20,103 @@ body {
   right: 0;
   width: 100%;
   height: 100vh;
+  z-index: -1;
   background-color: rgba(0, 0, 0, 0.356);
 }
 
 .name-wrapper {
   display: flex;
   align-items: center;
+}
+
+.enter-score-label {
+  color: #fff;
+  display: block;
+}
+
+.name-js {
+  width: 100%;
+  max-width: 400px;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  color: rgb(38, 252, 0);
+}
+
+.result {
+  width: 100%;
+  max-width: 600px;
+  color: #fff;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-btn {
+  margin-top: -65px;
+  margin-left: 68%;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: #fff;
+  z-index: 999;
+  top: 0;
+}
+
+.loader img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  animation: animate 2s linear infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  } 
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .button-btn {
+    margin-top: 30px;
+    margin-left: 38%;
+    /* transform: translateX(220%); */
+  }
+  .name-js {
+    font-size: 40px;
+  }
+
+  .result {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .name-js {
+    font-size: 36px;
+  }
+
+  .result {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }

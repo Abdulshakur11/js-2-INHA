@@ -29,10 +29,17 @@
                 </div>
                 <div class="col-md-4 mt-3">
                   <label for="score-id">Olgan balingizni kiriting</label>
-                  <input type="number" class="form-control enter-score" id="score-id" placeholder="Olgan balingizni kiriting" aria-label="Enter your score" required>
+                  <input type="number" class="form-control enter-score" id="score-id" placeholder="Olgan balingizni kiriting" aria-label="Enter your score" min="0" max="100">
                 </div>
             </div>
            <button class="btn btn-info button-btn" type="submit">Aniqlash</button>
+
+           <div class="form-check form-check-wrapper">
+            <input class="form-check-input check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label check-label" for="flexCheckDefault">
+              Tanish bilish
+            </label>
+          </div>
           </form>
         </div>
         <p class="name-js"></p>

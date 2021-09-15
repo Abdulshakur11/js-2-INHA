@@ -1,6 +1,8 @@
 var elForme = document.querySelector(".form-js");
 var elResult = document.querySelector(".result");
-var elNameJs = document.querySelector(".name-js")
+var elNameJs = document.querySelector(".name-js");
+var elInputCheckBox = document.querySelector(".check-input");
+
 
 var BUDGET = 80;
 var CONTRACT = 65;
@@ -12,12 +14,15 @@ elForme.addEventListener("submit", function (evt) {
   var elEnterInput = parseFloat(document.querySelector(".enter-score").value, 10);
   var elName = document.querySelector(".name-input").value;
   var elSureName = document.querySelector(".surename-input").value;
+  var isChecked = elInputCheckBox.checked
 
-  if (elEnterInput >= BUDGET) {
+  if (elInputCheckBox.checked) {
+    elResult.textContent = "Uzur biz korupsiyaga qarshimiz :)"
+    document.querySelector(".result").style.color = "red"
+  } else if (elEnterInput >= BUDGET) {
     elResult.textContent = "Tabriklaymiz o'qishga grant asasida kirdingiz!"
     elNameJs.textContent = `${elName} ${elSureName}`
-    document.querySelector(".result").style.color = "lightgreen"
-
+    document.querySelector(".result").style.color = "gold"
   } else if (elEnterInput >= CONTRACT) {
     elResult.textContent = "Tabrikalymiz o'qishga kontrakt asasida kirdingiz!"
     elNameJs.textContent = `${elName} ${elSureName}`
@@ -34,7 +39,7 @@ elForme.addEventListener("submit", function (evt) {
 })
 
 var pageLoader = document.querySelector('.loader')
-window.addEventListener('load', function(e){
+window.addEventListener('load', function (e) {
   pageLoader.remove();
 });
 
